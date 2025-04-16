@@ -16,7 +16,7 @@ class GameState:
                  third_or_worse_place_round_payout=-1,
                  game_end_payout=(8, 5, 3),
                  bad_game_end_bet=-1,
-                 verbose=False):
+                 verbose=True):
 
         # Global game variables
         self.NUM_CAMELS = num_camels

@@ -1,0 +1,5 @@
+,Avg Coins,Games Played,Win Count,Win %
+GreedyAgent,35.6,300,261.5,87.17
+RoundBetAgent,22.1,300,33.5,11.17
+MCTSAgent,9.83,300,5.0,1.67
+GameBetAgent,17.52,300,,

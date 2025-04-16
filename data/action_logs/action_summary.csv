@@ -1,0 +1,5 @@
+action_type,num_uses,avg_delta,avg_payout,win_rate
+game_bet,20,0.0,1.25,0.25
+move_camel,21,1.8571428571428572,0.8095238095238095,0.2857142857142857
+move_trap,10,0.0,0.0,0.0
+round_winner_bet,42,0.0,1.4761904761904763,0.2857142857142857

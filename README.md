@@ -70,3 +70,21 @@ Currently, the following columns are (in alphabetical order):
 | round_id | The number of the current round (one player action constitutes a round) |
 | trap_location | Where a player placed his trap if he placed it in this turn (this is technically redundant with player\_#\_trap_location) |
 | trap_type | Whether a player placed a +/- trap if he placed it in this turn (this is technically redundant with player\_#\_trap_type) |
+
+
+## Tounament
+
+Simulating games: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 1050/1050 [15:09:08<00:00, 51.95s/it]
+Tournament complete!
+All game logs saved to: tournament_logs/all_games_log.csv
+Head-to-head win matrix saved to: tournament_logs/head_to_head_win_matrix.csv
+Positional win stats saved to: tournament_logs/player_position_wins.csv
+Heatmap saved to: tournament_logs/head_to_head_heatmap.png
+
+## Analysis
+
+All Figures are generated in the ipynb files in the analysis directory
+
+## Data
+
+The data from the torunaments were stored in the data folder

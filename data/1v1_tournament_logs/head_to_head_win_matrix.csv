@@ -1,0 +1,8 @@
+,RandomAgent,MCTSAgent,RoundBetAgent,TrapBetAgent,GameBetAgent,RollAgent,GreedyAgent
+RandomAgent,0,30,7,50,13,4,0
+MCTSAgent,19,0,0,50,6,5,2
+RoundBetAgent,42,49,0,50,49,50,2
+TrapBetAgent,0,0,0,0,0,0,0
+GameBetAgent,37,44,1,50,0,10,2
+RollAgent,46,45,0,50,40,0,0
+GreedyAgent,50,48,47,50,48,50,0

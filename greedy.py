@@ -26,7 +26,11 @@ def simulate_round(game_state, active_player, num_simulations=1000):
     current_player = active_player
     for _ in range(num_simulations):
         state = game_state
-        while not all(state.camel_yet_to_move):  # Continue until all camels have moved
+        round_start = False
+        if all(state.camel_yet_to_move):
+            round_start = True
+        while round_start or not all(state.camel_yet_to_move):  # Continue until all camels have moved
+            round_start = False
             if not state.active_game:
                 break
             roll_id = (0,)
@@ -113,7 +117,7 @@ def calculate_rolling_ev(gamma = 0.75):
 
 # RACE BETTING
 
-def simulate_race(game_state, active_player, num_simulations=500):
+def simulate_race(game_state, active_player, num_simulations=800):
     """
     Simulates the rest of the current round num_simulations times to estimate camel probabilities.
     :param game_state: The current game state.
@@ -222,7 +226,11 @@ def simulate_round_with_traps(game_state : GameState, active_player, trap_type, 
     
     for _ in range(num_simulations // 2):
         state = game_state
-        while not all(state.camel_yet_to_move):  # Continue until all camels have moved
+        round_start = False
+        if all(state.camel_yet_to_move):
+            round_start = True
+        while round_start or not all(state.camel_yet_to_move):  # Continue until all camels have moved
+            round_start = False
             if not state.active_game:
                 break
             roll_id = (0,)
@@ -240,7 +248,11 @@ def simulate_round_with_traps(game_state : GameState, active_player, trap_type, 
     start_state_with_trap = transition(state, current_player, (MOVE_TRAP_ACTION_ID, trap_type, trap_position))
     for _ in range(num_simulations // 2):
         state = start_state_with_trap
-        while not all(state.camel_yet_to_move):  # Continue until all camels have moved
+        round_start = False
+        if all(state.camel_yet_to_move):
+            round_start = True
+        while round_start or not all(state.camel_yet_to_move):  # Continue until all camels have moved
+            round_start = False
             if not state.active_game:
                 break
             roll_id = (0,)
