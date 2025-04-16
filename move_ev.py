@@ -105,8 +105,8 @@ def play_game(players):
 
     return action_log, g
 
-def run_ev_tracking_simulation(num_games=200, log_file_path="game_logs/GreedyActionEVLog.csv"):
-    os.makedirs("game_logs", exist_ok=True)
+def run_ev_tracking_simulation(num_games=200, log_file_path="GreedyActionEVLog.csv"):
+    os.makedirs("data", exist_ok=True)
     all_game_logs = []
 
     for game_id in tqdm.tqdm(range(num_games), desc="Simulating games"):

@@ -19,10 +19,10 @@ bot_classes = {
     "GreedyAgent": GreedyAgent,
 }
 
-output_dir = "four_player_tournament_pt2"
+output_dir = "data"
 os.makedirs(output_dir, exist_ok=True)
 
-def run_random_4player(num_games=10000):
+def run_random_4player(num_games=1000):
     print("Running: random_4player")
     logs = []
 
@@ -45,7 +45,7 @@ def run_random_4player(num_games=10000):
 
         logs.append(df)
 
-    pd.concat(logs).to_csv(os.path.join(output_dir, "random_4player_game_logs_pt2.csv"), index=False)
+    pd.concat(logs).to_csv(os.path.join(output_dir, "random_4player_game_logs.csv"), index=False)
 
 def run_greedy_4player(num_games=100):
     print("Running: greedy_4player")
@@ -179,9 +179,9 @@ def run_roll_and_greedy_fixed_order_4player(num_games=300):
     pd.concat(logs).to_csv(os.path.join(output_dir, "roll_and_greedy_4player_game_logs_pt2.csv"), index=False)
 
 if __name__ == "__main__":
-    # run_random_4player()
+    run_random_4player()
     # run_greedy_4player()
-    run_mixed_4player_permutations()
+    # run_mixed_4player_permutations()
     # run_fixed_order_4player()
     # run_mixed_4player_permutations_pt2()
     # run_roll_and_greedy_fixed_order_4player()

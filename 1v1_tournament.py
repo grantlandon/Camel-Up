@@ -23,7 +23,7 @@ bot_classes = {
 bot_names = list(bot_classes.keys())
 games_per_pair = 50
 half_games = games_per_pair // 2
-log_dir = "tournament_logs"
+log_dir = "data"
 os.makedirs(log_dir, exist_ok=True)
 
 head_to_head_wins = {bot: {op: 0 for op in bot_names} for bot in bot_names}
