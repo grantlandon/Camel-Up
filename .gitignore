@@ -105,3 +105,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+data/4v4_tournament_logs/random_4player_game_logs_pt2.csv
